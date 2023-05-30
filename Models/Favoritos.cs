@@ -1,12 +1,12 @@
 ﻿namespace BoraAli.Api.Models
 {
-    public class Visita : Base
+    public class Favoritos : Base
     {
-        public DateTime DataVisita { get; private set; }
-        public Usuario Usuario { get; set; }
+        public int QtdFavoritos { get; set; }
         public PontoTuristico PontoTuristico { get; set; }
+        public Usuario Usuario { get; set; }  
 
-        public Visita(Usuario usuario, PontoTuristico pontoTuristico)
+        public Favoritos(PontoTuristico pontoTuristico, Usuario usuario)
         {
             PontoTuristico = pontoTuristico;
             Usuario = usuario;
