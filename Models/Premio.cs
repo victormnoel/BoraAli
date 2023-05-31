@@ -21,12 +21,6 @@
 
         }
         public Premio(){}
-
-        public static implicit operator List<object>(Premio v)
-        {
-            throw new NotImplementedException();
-        }
         #endregion
-
     }
 }

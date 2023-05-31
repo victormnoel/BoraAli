@@ -1,4 +1,6 @@
+using BoraAli.Api.Context;
 using BoraAli.Api.Models;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +10,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddDbContext<BoraAliContext>(options => options.UseMySql("Server=localhost;Database=boraali;userId=root;password=root;"
+, ServerVersion.Parse("8.0.33-mysql")));
 
 var app = builder.Build();
 

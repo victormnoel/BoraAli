@@ -7,7 +7,7 @@
         public double TamanhoRota { get; private set; }
         public int QtdPontosVisitados { get; private set; }
         public Usuario Usuario { get; private set; } = new Usuario();
-        public Avaliacao Avaliacao { get; set; } = new Avaliacao();
+        public List<Avaliacao> Avaliacao { get; set; } = new List<Avaliacao>();
         public List<PontoTuristico> PontoTuristico { get; set; } = new List<PontoTuristico>();
         #endregion
 

@@ -1,10 +1,15 @@
-﻿namespace BoraAli.Api.Models
+﻿
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace BoraAli.Api.Models
 {
     public class Favorito : Base
     {
-         #region Propriedades
+        #region Propriedades
         public int QtdFavoritos { get; private set; }
-        public PontoTuristico PontoTuristico { get; set; }  = new PontoTuristico();
+
+        public int PontosTuristicoId { get; set; }
+        public PontoTuristico PontoTuristico { get; set; } = new PontoTuristico();
         public Usuario Usuario { get; set; } = new Usuario();
         #endregion
 
@@ -15,7 +20,7 @@
             Usuario = usuario;
         }
 
-        public Favorito() {}
+        public Favorito() { }
         #endregion
     }
 }
