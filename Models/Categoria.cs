@@ -2,6 +2,15 @@
 {
     public class Categoria : Base
     {
-        public int Nome { get; set; }
+        public string Nome { get; private set; } = string.Empty;
+        public List<PontoTuristico> PontosTuristicos {get; set;} = new List<PontoTuristico>();
+
+        public Categoria(string nome, List<PontoTuristico> pontoTuristicos)
+        {
+            Nome = nome;
+            PontosTuristicos = pontoTuristicos;
+
+        }
+        public Categoria(){}
     }
 }

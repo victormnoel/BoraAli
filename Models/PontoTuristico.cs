@@ -2,6 +2,7 @@
 {
     public class PontoTuristico : Base
     {
+        #region Propriedades
         public string Nome { get; set; } = string.Empty;
         public string Descricao { get; set; } = string.Empty;
         public string Logradouro { get; set; } = string.Empty;
@@ -13,6 +14,11 @@
         public List<PrecoIngresso> PrecoIngressos { get; set; } = new List<PrecoIngresso>();
         public List<Premio> Premios { get; set; } = new List<Premio>();
         public List<Roteiro> Roteiros { get; set; } = new List<Roteiro>();
+        public Favorito Favorito { get; set; } = new Favorito();
+        public List<Avaliacao> Avaliacoes { get; set; } = new List<Avaliacao>();
+        #endregion
+
+        public PontoTuristico() { }
 
 
     }
