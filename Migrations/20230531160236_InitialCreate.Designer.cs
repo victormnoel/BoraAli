@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BoraAli.Api.Migrations
 {
     [DbContext(typeof(BoraAliContext))]
-    [Migration("20230531035316_InitialCreate")]
+    [Migration("20230531160236_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />

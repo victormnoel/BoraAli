@@ -11,7 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<BoraAliContext>(options => options.UseMySql("Server=localhost;Database=boraali;userId=root;password=root;"
-, ServerVersion.Parse("8.0.33-mysql")));
+, ServerVersion.Parse("8.0.29-mysql")));
 
 var app = builder.Build();
 

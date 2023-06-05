@@ -8,6 +8,7 @@ namespace BoraAli.Api.Models
         #region Propriedades
         public int QtdFavoritos { get; private set; }
 
+        
         public int PontosTuristicoId { get; set; }
         public PontoTuristico PontoTuristico { get; set; } = new PontoTuristico();
         public Usuario Usuario { get; set; } = new Usuario();
