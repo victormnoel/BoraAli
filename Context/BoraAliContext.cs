@@ -5,7 +5,7 @@ namespace BoraAli.Api.Context
 {
     public class BoraAliContext : DbContext
     {
-       
+
         public BoraAliContext(DbContextOptions<BoraAliContext> options) : base(options)
         { }
 
@@ -33,6 +33,19 @@ namespace BoraAli.Api.Context
             .HasForeignKey<Favorito>(f => f.PontosTuristicoId);
 
 
+            var Usuario = modelBuilder.Entity<Usuario>().HasData(
+                new Usuario
+                {
+                    Id = 1,
+                    Nome = "Victor",
+                    Email = "victor@gmail.com",
+                    Idade = 22,
+                    Genero = "Masculino",
+                    DataCriacao = DateTime.Now
+                }
+                );
+
+
         }
-    }
+}
 }

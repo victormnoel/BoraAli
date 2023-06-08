@@ -1,4 +1,5 @@
 using BoraAli.Api.Context;
+using BoraAli.Api.Infra.Data;
 using BoraAli.Api.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,7 +12,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<BoraAliContext>(options => options.UseMySql("Server=localhost;Database=boraali;userId=root;password=root;"
-, ServerVersion.Parse("8.0.29-mysql")));
+, ServerVersion.Parse("8.0.33-mysql")));
+
+builder.Services.AddScoped<IBaseInfraData, BaseInfraData>();
+builder.Services.AddScoped<IUsuarioInfraData, UsuarioInfraData>();
+
+
 
 var app = builder.Build();
 

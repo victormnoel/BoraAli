@@ -3,6 +3,7 @@ using System;
 using BoraAli.Api.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BoraAli.Api.Migrations
 {
     [DbContext(typeof(BoraAliContext))]
-    partial class BoraAliContextModelSnapshot : ModelSnapshot
+    [Migration("20230608124229_AtualizandoDados")]
+    partial class AtualizandoDados
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

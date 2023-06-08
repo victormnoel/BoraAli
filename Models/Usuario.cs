@@ -3,10 +3,10 @@
     public class Usuario : Base
     {
         #region Propriedades
-        public string Nome { get; private set; } = string.Empty;
-        public string Email { get; private set; } = string.Empty;
-        public int Idade { get; private set; }
-        public string Genero { get; private set; } = string.Empty;
+        public string Nome { get; set; } = string.Empty;
+        public string Email { get; set; } = string.Empty;
+        public int Idade { get; set; }
+        public string Genero { get; set; } = string.Empty;
         public List<Visita> Visitas { get; set; } = new List<Visita>();
         public List<Favorito> Favoritos { get; set; } = new List<Favorito>();
         public List<Premio> Premio { get; private set; } = new List<Premio>();

@@ -2,7 +2,7 @@
 {
     public class Base
     {
-        public int Id { get; private set; }
-        public DateTime DataCriacao { get; private set; }
+        public int Id { get; set; }
+        public DateTime DataCriacao { get; set; }
     }
 }

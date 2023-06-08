@@ -3,6 +3,7 @@ using System;
 using BoraAli.Api.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BoraAli.Api.Migrations
 {
     [DbContext(typeof(BoraAliContext))]
-    partial class BoraAliContextModelSnapshot : ModelSnapshot
+    [Migration("20230608124008_InserindoDado")]
+    partial class InserindoDado
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -320,7 +323,7 @@ namespace BoraAli.Api.Migrations
                         new
                         {
                             Id = 1,
-                            DataCriacao = new DateTime(2023, 6, 8, 9, 42, 29, 723, DateTimeKind.Local).AddTicks(7339),
+                            DataCriacao = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "victor@gmail.com",
                             Genero = "Masculino",
                             Idade = 22,

@@ -4,10 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using BoraAli.Api.Context;
 using BoraAli.Api.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace BoraAli.Api.Infra.Data
 {
-    public class UsuarioInfraData : BaseInfraData
+    public class UsuarioInfraData : BaseInfraData, IUsuarioInfraData
     {
         private readonly BoraAliContext _context;
         public UsuarioInfraData(BoraAliContext context) : base(context)
@@ -15,15 +16,14 @@ namespace BoraAli.Api.Infra.Data
             _context = context;
         }
 
-        public IEnumerable<Usuario> GetUsuarios()
+        public async Task<IEnumerable<Usuario>> GetUsuarios()
         {
-            return _context.Usuario.ToList();
+            return await _context.Usuario.ToListAsync();
         }
-        public Usuario GetUsuarioById(int id)
+        public async Task<Usuario> GetUsuarioById(int id)
         {
-            return _context.Usuario.Where(x => x.Id == id).First();
+            return await _context.Usuario.Where(x => x.Id == id).FirstAsync();
         }
-
 
     }
 }
